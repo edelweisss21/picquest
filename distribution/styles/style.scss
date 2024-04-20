@@ -1,0 +1,122 @@
+@import 'reset.min';
+
+/* CALC */
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+	@return calc($pixels / $context) * 1rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+	@return calc($pixels / $context) * 1em;
+}
+
+body {
+	font-family: 'K2D';
+	font-size: rem(16);
+	background-color: #100f0f;
+	color: #fff;
+}
+
+.container {
+	max-width: 1450px;
+	margin: 0 auto;
+	padding: em(15);
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	padding: em(10);
+	position: absolute;
+	width: 100%;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+.header__logo {
+	font-family: 'Just Another Hand';
+	font-size: rem(54);
+}
+
+.promo {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 450px;
+	height: 100%;
+	background: url('../img/bg.jpeg');
+	background-size: cover;
+	z-index: 1;
+
+	.container {
+		margin-top: 100px;
+	}
+
+	&::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0) 48.855%,
+			rgb(16, 15, 15) 100%
+		);
+	}
+}
+
+.main__title {
+	font-size: rem(36);
+	line-height: 47px;
+}
+
+.main__subtitle {
+	line-height: 21px;
+}
+
+.main__search {
+	display: flex;
+	align-items: center;
+	gap: 0 em(12);
+	background-color: #fff;
+	margin-top: em(20);
+	padding: em(17) em(30);
+	max-width: 680px;
+	width: 100%;
+	border-radius: 40px;
+}
+
+.main__input {
+	border: none;
+	width: 100%;
+}
+
+.material__box {
+	display: flex;
+	justify-content: center;
+	gap: 0 em(20);
+	margin-top: em(50);
+	margin-bottom: em(50);
+	font-size: rem(18);
+}
+
+.material__btn {
+	transition: all 0.3s ease;
+	&:hover {
+		color: #afafaf;
+	}
+}
+
+.material__photos {
+	display: grid;
+	grid-template-columns: repeat(3, 400px);
+	gap: em(30);
+	justify-content: center;
+}

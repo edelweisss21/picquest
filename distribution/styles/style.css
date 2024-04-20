@@ -1,0 +1,212 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+blockquote, body, dd, dl, figure, h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+ol[role=list], ul[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, ::after, ::before {
+    animation-duration: NaNs !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: NaNs !important;
+    scroll-behavior: auto !important;
+  }
+}
+abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus {
+  outline: 0;
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: "";
+  content: none;
+}
+
+img {
+  pointer-events: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CALC */
+body {
+  font-family: "K2D";
+  font-size: 1rem;
+  background-color: #100f0f;
+  color: #fff;
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0.9375em;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 0.625em;
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.header__logo {
+  font-family: "Just Another Hand";
+  font-size: 3.375rem;
+}
+
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 450px;
+  height: 100%;
+  background: url("../img/bg.jpeg");
+  background-size: cover;
+  z-index: 1;
+}
+.promo .container {
+  margin-top: 100px;
+}
+.promo::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 48.855%, rgb(16, 15, 15) 100%);
+}
+
+.main__title {
+  font-size: 2.25rem;
+  line-height: 47px;
+}
+
+.main__subtitle {
+  line-height: 21px;
+}
+
+.main__search {
+  display: flex;
+  align-items: center;
+  gap: 0 0.75em;
+  background-color: #fff;
+  margin-top: 1.25em;
+  padding: 1.0625em 1.875em;
+  max-width: 680px;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.main__input {
+  border: none;
+  width: 100%;
+}
+
+.material__box {
+  display: flex;
+  justify-content: center;
+  gap: 0 1.25em;
+  margin-top: 3.125em;
+  margin-bottom: 3.125em;
+  font-size: 1.125rem;
+}
+
+.material__btn {
+  transition: all 0.3s ease;
+}
+.material__btn:hover {
+  color: #afafaf;
+}
+
+.material__photos {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 1.875em;
+  justify-content: center;
+}

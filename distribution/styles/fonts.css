@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'K2D';
+	src: url('../fonts/K2D-Light.ttf');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Just Another Hand';
+	src: url('../fonts/JustAnotherHand.ttf');
+	font-style: normal;
+	font-weight: normal;
+}
