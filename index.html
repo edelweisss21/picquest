@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>PicQuest</title>
 		<link rel="stylesheet" href="./distribution/styles/fonts.css" />
 		<link rel="stylesheet" href="./distribution/styles/style.css" />
 	</head>
@@ -26,25 +26,50 @@
 							</p>
 						</div>
 						<div class="main__search">
-							<img src="./distribution/img/Search.svg" alt="search" />
-							<input
-								class="main__input"
-								type="search"
-								name="search"
-								placeholder="Image search in PicQuest"
-							/>
+							<button type="button" class="search__btn">
+								<svg class="search__btn-img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_2497_25824)">
+									<path d="M21 21L16.6569 16.6569M16.6569 16.6569C18.1046 15.2091 19 13.2091 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C13.2091 19 15.2091 18.1046 16.6569 16.6569Z" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_2497_25824">
+									<rect width="24" height="24" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+							</button>
+							<form class="form" action="">
+								<input
+									class="main__input"
+									type="search"
+									name="search"
+									autocomplete="off"
+									placeholder="Image search in PicQuest"
+								/>
+							</form>
 						</div>
 				</div>
 				</section>
 				<section class="material">
-					<div class="material__box">
-						<a href="#" class="material__btn">Pictures</a>
-						<a href="#" class="material__btn">Videos</a>
+					<div class="container">
+						<div class="material__box">
+							<a href="#" class="material__btn active">Pictures</a>
+							<a href="#" class="material__btn">Videos</a>
+						</div>
+						<div class="material__photos"></div>
 					</div>
-					<div class="material__photos"></div>
 				</section>
 			</div>
 		</main>
+		<div class="modal__window">
+			<div class="modal__window-inner">
+				<div class="modal__window-content">
+				</div>
+				<div id="close-modal">
+					<img class="close-btn" src="./distribution/img/close-modal.svg" alt="closeWindow">
+				</div>
+			</div>
+		</div>
 		<script src="./distribution/scripts/main.js"></script>
 	</body>
 </html>
