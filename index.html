@@ -5,71 +5,150 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>PicQuest</title>
 		<link rel="stylesheet" href="./distribution/styles/fonts.css" />
-		<link rel="stylesheet" href="./distribution/styles/style.css" />
+		<link rel="stylesheet" href="./distribution/styles/style.min.css" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./distribution/img/icons/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./distribution/img/icons/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./distribution/img/icons/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./distribution/img/icons/site.webmanifest" />
 	</head>
 	<body>
+		<div class="popup hidden">
+			<div id="close-popup">
+				<img
+					class="close-btn"
+					src="./distribution/img/close-modal.svg"
+					alt="closeWindow"
+				/>
+			</div>
+		</div>
 		<header class="header">
 			<div class="container">
-				<a href="#" class="header__logo">PicQuest</a>
+				<a href="index.html" class="header__logo">PicQuest</a>
 			</div>
 		</header>
 		<main class="main">
 			<section class="promo">
-					<div class="container">
-						<div class="main__text">
-							<h1 class="main__title">
-								Incredibly beautiful stock images for free
-							</h1>
-							<p class="main__subtitle">
-								Over 1 million high quality images and videos from our talented
-								community.
-							</p>
-						</div>
-						<div class="main__search">
-							<button type="button" class="search__btn">
-								<svg class="search__btn-img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<g clip-path="url(#clip0_2497_25824)">
-									<path d="M21 21L16.6569 16.6569M16.6569 16.6569C18.1046 15.2091 19 13.2091 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C13.2091 19 15.2091 18.1046 16.6569 16.6569Z" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</g>
-									<defs>
-									<clipPath id="clip0_2497_25824">
-									<rect width="24" height="24" fill="white"/>
-									</clipPath>
-									</defs>
-									</svg>
-							</button>
-							<form class="form" action="">
-								<input
-									class="main__input"
-									type="search"
-									name="search"
-									autocomplete="off"
-									placeholder="Image search in PicQuest"
-								/>
-							</form>
-						</div>
-				</div>
-				</section>
-				<section class="material">
-					<div class="container">
-						<div class="material__box">
-							<a href="#" class="material__btn active">Pictures</a>
-							<a href="#" class="material__btn">Videos</a>
-						</div>
-						<div class="material__photos"></div>
+				<div class="container">
+					<div class="main__text">
+						<h1 class="main__title">
+							Incredibly beautiful stock images for free
+						</h1>
+						<p class="main__subtitle">
+							Over 1 million high quality images and videos from our talented
+							community.
+						</p>
 					</div>
-				</section>
-			</div>
+					<div class="main__search">
+						<button type="button" class="search__btn">
+							<svg
+								class="search__btn-img"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_2497_25824)">
+									<path
+										d="M21 21L16.6569 16.6569M16.6569 16.6569C18.1046 15.2091 19 13.2091 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C13.2091 19 15.2091 18.1046 16.6569 16.6569Z"
+										stroke="gray"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_2497_25824">
+										<rect width="24" height="24" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</button>
+						<form class="form" action="">
+							<input
+								class="main__input"
+								type="search"
+								name="search"
+								autocomplete="off"
+								placeholder="Image search in PicQuest"
+							/>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="material">
+				<div class="container">
+					<div class="materials__title-container"></div>
+					<div class="material__photos"></div>
+					<div class="material__pagination">
+						<a class="material__arrow-btn" href="#" id="prev-arrow"
+							><img
+								src="./distribution/img/left-arrow.svg"
+								alt="prev-arrow"
+							/>Prev Page</a
+						>
+						<a class="material__arrow-btn" href="#" id="next-arrow"
+							>Next Page
+							<img src="./distribution/img/right-arrow.svg" alt="next-arrow"
+						/></a>
+					</div>
+				</div>
+			</section>
 		</main>
+		<footer class="footer">
+			<div class="container">
+				<ul class="footer__list">
+					<li class="list__item">
+						<a
+							href="https://github.com/edelweisss21"
+							target="_blank"
+							class="list__item-link"
+							>Developer</a
+						>
+					</li>
+					<li class="list__item">
+						<span
+							>Powered by
+							<a
+								href="https://www.pexels.com/api/"
+								target="_blank"
+								class="list__item-link"
+								>Pexels API</a
+							></span
+						>
+					</li>
+					<li class="list__item">
+						<span id="time"></span>
+					</li>
+				</ul>
+			</div>
+		</footer>
 		<div class="modal__window">
 			<div class="modal__window-inner">
-				<div class="modal__window-content">
-				</div>
+				<div class="modal__window-content"></div>
 				<div id="close-modal">
-					<img class="close-btn" src="./distribution/img/close-modal.svg" alt="closeWindow">
+					<img
+						class="close-btn"
+						src="./distribution/img/close-modal.svg"
+						alt="closeWindow"
+					/>
 				</div>
 			</div>
 		</div>
-		<script src="./distribution/scripts/main.js"></script>
+		<script src="./distribution/scripts/main.min.js"></script>
 	</body>
 </html>
